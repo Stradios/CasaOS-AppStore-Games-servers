@@ -26,12 +26,12 @@ services:
 x-casaos:
   author: self
   category: self
-  hostname: playit
+  hostname: playit.gg
   icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
   index: /
   is_uncontrolled: false
   port_map: ""
   scheme: http
-  store_app_id: payit.gg
+  store_app_id: zealous_kaity
   title:
     custom: payit
