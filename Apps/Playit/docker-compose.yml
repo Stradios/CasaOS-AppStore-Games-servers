@@ -3,13 +3,13 @@ services:
   playit:
     cpu_shares: 90
     command: []
-    container_name: payit.gg
+    container_name: payit
     deploy:
       resources:
         limits:
           memory: 15901M
     hostname: playit
-    image: ghcr.io/docker-collection/payit:latest
+    image:  latest
     labels:
       icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
     restart: always
@@ -24,14 +24,27 @@ services:
     network_mode: bridge
     privileged: false
 x-casaos:
-  author: self
-  category: self
+  author: Stradios
+  category: 
   hostname: playit
   icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
+    screenshot_link:
+    - https://playit.gg/build/_assets/logo-NYRFHLA6.png
+  thumbnail: https://playit.gg/build/_assets/logo-NYRFHLA6.png
+  description:
+    en_us: Get started with hosting your Games with playit.gg
+  tagline:
+    en_us: playit.gg
+  title:
+    en_us: playit.gg
+  tips:
+    before_install:
+      en_us: |
+      You will need to hav installed Porportainer on you sistem to termina
   index: /
   is_uncontrolled: false
   port_map: ""
   scheme: http
-  store_app_id: payit.gg
+  store_app_id: payit
   title:
     custom: payit
