@@ -1,17 +1,17 @@
-name: payit
+name: playit
 services:
   playit:
     cpu_shares: 90
     command: []
-    container_name: payit
+    container_name: playit
     deploy:
       resources:
         limits:
           memory: 15901M
     hostname: playit
-    image:  latest
+    image: ghcr.io/docker-collection/payit:latest
     labels:
-      icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
+      icon: https://images-ext-2.discordapp.net/external/BjmbmtASSEbKcGIhpd2Cqef_9aclrZFPULterdufruU/http/discuss.playit.gg/uploads/default/original/1X/1d18fc449f5ae05b45f3f3adf04e0043a1cd192d.png?format=webp&quality=lossless
     restart: always
     volumes:
       - type: bind
@@ -24,11 +24,28 @@ services:
     network_mode: bridge
     privileged: false
 x-casaos:
+  author: self
+  category: self
+  hostname: playit.gg
+  icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit/icon.png
+  index: /
+  is_uncontrolled: false
+  port_map: ""
+  scheme: http
+  store_app_id: zealous_kaity
+  title:
+    custom: payit.gg
+
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
   author: Stradios
-  category: 
+  category: Network
   hostname: playit
   icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
-    screenshot_link:
+  screenshot_link:
     - https://playit.gg/build/_assets/logo-NYRFHLA6.png
   thumbnail: https://playit.gg/build/_assets/logo-NYRFHLA6.png
   description:
@@ -40,11 +57,27 @@ x-casaos:
   tips:
     before_install:
       en_us: |
-      You will need to hav installed Porportainer on you sistem to termina
+        You will need to hav installed Porportainer on you sistem to termina
   index: /
-  is_uncontrolled: false
-  port_map: ""
+
+  xx-casaos:
+  author: Stradios
+  category: Network
+  hostname: playit
+  icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
+  screenshot_link:
+    - https://playit.gg/build/_assets/logo-NYRFHLA6.png
+  thumbnail: https://playit.gg/build/_assets/logo-NYRFHLA6.png
+  description:
+    en_us: Get started with hosting your Games with playit.gg
+    tagline:
+    en_us: playit.gg
+    title:
+    en_us: playit.gg
+    tips:
+    before_install:
+      en_us: |
+        You will need to hav installed Porportainer on you sistem to termina
+  port_map: ''
   scheme: http
-  store_app_id: payit
-  title:
-    custom: payit
+  index: /
