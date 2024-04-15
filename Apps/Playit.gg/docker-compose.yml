@@ -1,0 +1,37 @@
+name: payit.gg
+services:
+  playit:
+    cpu_shares: 90
+    command: []
+    container_name: payit.gg
+    deploy:
+      resources:
+        limits:
+          memory: 15901M
+    hostname: playit
+    image: ghcr.io/docker-collection/payit:latest
+    labels:
+      icon: https://images-ext-2.discordapp.net/external/BjmbmtASSEbKcGIhpd2Cqef_9aclrZFPULterdufruU/http/discuss.playit.gg/uploads/default/original/1X/1d18fc449f5ae05b45f3f3adf04e0043a1cd192d.png?format=webp&quality=lossless
+    restart: always
+    volumes:
+      - type: bind
+        source: /DATA/AppData
+        target: /app/config
+    ports: []
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: playit.gg
+  icon: https://www.spigotmc.org/data/resource_icons/105/105566.jpg?1664672688
+  index: /
+  is_uncontrolled: false
+  port_map: ""
+  scheme: http
+  store_app_id: zealous_kaity
+  title:
+    custom: payit.gg
