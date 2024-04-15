@@ -1,83 +1,40 @@
 name: playit
 services:
-  playit:
-    cpu_shares: 90
-    command: []
+  palworld-server:
+    image: ghcr.io/docker-collection/payit:latest
+    restart: unless-stopped
     container_name: playit
+    volumes:
+      - /DATA/AppData/playit:/app/config
+    network_mode: bridge
     deploy:
       resources:
-        limits:
-          memory: 15901M
-    hostname: playit
-    image: ghcr.io/docker-collection/payit:latest
-    labels:
-      icon: https://images-ext-2.discordapp.net/external/BjmbmtASSEbKcGIhpd2Cqef_9aclrZFPULterdufruU/http/discuss.playit.gg/uploads/default/original/1X/1d18fc449f5ae05b45f3f3adf04e0043a1cd192d.png?format=webp&quality=lossless
-    restart: always
-    volumes:
-      - type: bind
-        source: /DATA/AppData
-        target: /app/config
-    ports: []
-    devices: []
-    cap_add: []
-    environment: []
-    network_mode: bridge
-    privileged: false
-x-casaos:
-  author: self
-  category: self
-  hostname: playit.gg
-  icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit/icon.png
-  index: /
-  is_uncontrolled: false
-  port_map: ""
-  scheme: http
-  store_app_id: zealous_kaity
-  title:
-    custom: payit.gg
-
+        reservations:
+          memory: 4096M
 
 x-casaos:
   architectures:
     - amd64
     - arm64
-  author: Stradios
+  main: playit
+  store_app_id: playit.gg
   category: Network
-  hostname: playit
-  icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
+  author: Stradios
+  developer: zealous_kaity
+  icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit/icon.png
   screenshot_link:
     - https://playit.gg/build/_assets/logo-NYRFHLA6.png
   thumbnail: https://playit.gg/build/_assets/logo-NYRFHLA6.png
   description:
-    en_us: Get started with hosting your Games with playit.gg
+    en_us: Get started with hosting your game Servers playiy.gg
   tagline:
-    en_us: playit.gg
+    en_us: Easily hosting your game Servers playiy.gg
   title:
-    en_us: playit.gg
+    en_us: playiy.gg
   tips:
     before_install:
       en_us: |
-        You will need to hav installed Porportainer on you sistem to termina
-  index: /
-
-  xx-casaos:
-  author: Stradios
-  category: Network
-  hostname: playit
-  icon: https://raw.githubusercontent.com/Stradios/CasaOS-AppStore-Games-servers/main/Apps/Playit.gg/icon.png
-  screenshot_link:
-    - https://playit.gg/build/_assets/logo-NYRFHLA6.png
-  thumbnail: https://playit.gg/build/_assets/logo-NYRFHLA6.png
-  description:
-    en_us: Get started with hosting your Games with playit.gg
-    tagline:
-    en_us: playit.gg
-    title:
-    en_us: playit.gg
-    tips:
-    before_install:
-      en_us: |
-        You will need to hav installed Porportainer on you sistem to termina
+        Get started with hosting your game Servers playiy.gg
   port_map: ''
   scheme: http
   index: /
